@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erdinç YILMAZ - Software Test Automation Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+            background: #181a20;
+            color: #e5e7eb;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #7dd3fc;
+            border-left: 4px solid #38bdf8;
+            padding-left: 0.75rem;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+        }
+        .terminal {
+            background: #23272e;
+            color: #a3e635;
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            font-family: 'Fira Code', monospace;
+            box-shadow: 0 2px 16px 0 #00000033;
+        }
+        .code-block {
+            background: #23272e;
+            color: #38bdf8;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 0.4rem;
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 1.5rem;
+        }
+        .project-card {
+            background: #23272e;
+            border: 1px solid #334155;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+        .project-card:hover {
+            box-shadow: 0 4px 24px 0 #38bdf855;
+        }
+        .socials a {
+            color: #7dd3fc;
+            margin-right: 1.2rem;
+            transition: color 0.2s;
+        }
+        .socials a:hover {
+            color: #38bdf8;
+        }
+        .mono {
+            font-family: 'Fira Code', monospace;
+        }
+        .contact-icon {
+            color: #38bdf8;
+            margin-right: 0.7rem;
+        }
+        .private-badge {
+            background: #334155;
+            color: #fbbf24;
+            font-size: 0.8rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 0.3rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="w-full py-4 px-8 flex justify-between items-center bg-[#1e222a] border-b border-[#23272e] sticky top-0 z-50">
+        <span class="text-2xl font-bold text-[#7dd3fc] tracking-tight">🅔🅡🅓🅘🅝🅒 🅨🅘🅛🅜🅐🅩</span>
+        <div class="flex items-center space-x-8">
+            <div class="hidden md:flex space-x-8 text-[#a3e635] font-mono">
+                <a href="#about" class="hover:text-[#38bdf8]" data-tr="about" data-en="about">about</a>
+                <a href="#skills" class="hover:text-[#38bdf8]" data-tr="skills" data-en="skills">skills</a>
+                <a href="#projects" class="hover:text-[#38bdf8]" data-tr="projects" data-en="projects">projects</a>
+                <a href="#contact" class="hover:text-[#38bdf8]" data-tr="contact" data-en="contact">contact</a>
+            </div>
+            <div class="ml-6 flex items-center space-x-2">
+                <button id="lang-tr" class="text-[#7dd3fc] font-bold px-2 py-1 border border-[#38bdf8] rounded bg-[#23272e]">TR</button>
+                <span class="text-[#7dd3fc]">|</span>
+                <button id="lang-en" class="text-[#7dd3fc] font-bold px-2 py-1 border border-[#23272e] rounded">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+        <div class="flex flex-col md:flex-row items-center md:space-x-10">
+            <img src="profile.jpg" alt="Erdinç Yılmaz" class="w-40 h-40 object-cover rounded-full border-4 border-[#38bdf8] mb-8 md:mb-0 shadow-lg" />
+            <div>
+                <div class="terminal">
+                    <span class="text-[#a3e635]">$</span> whoami<br>
+                    <span class="text-[#38bdf8]">Erdinç YILMAZ</span> <span class="text-[#a3e635]">// Software Test Automation Engineer @ beIN MEDIA GROUP</span><br>
+                    <span class="text-[#a3e635]">$</span> echo "Amateur Photographer, Open Source Contributor, Tech Enthusiast"
+                </div>
+                <p class="text-lg text-[#e5e7eb] mb-4" data-tr="Merhaba! Ben Erdinç, teknolojiye ve yazılıma tutkuyla bağlı biriyim. Gündüzleri test otomasyon mühendisi, akşamları ise fotoğraf tutkunu bir amatörüm. Farklı programlama dillerini öğrenmekten, yeni teknolojiler keşfetmekten ve açık kaynak projelere katkı sağlamaktan büyük keyif alıyorum. Hayatım boyunca sürekli öğrenmeye ve paylaşmaya çalışıyorum." data-en="Hello! I'm Erdinç, a passionate technology and software enthusiast. By day, I'm a test automation engineer; by night, an amateur photographer. I love learning different programming languages, discovering new technologies, and contributing to open source projects. Throughout my life, I strive to keep learning and sharing.">Merhaba! Ben Erdinç, teknolojiye ve yazılıma tutkuyla bağlı biriyim. Gündüzleri test otomasyon mühendisi, akşamları ise fotoğraf tutkunu bir amatörüm. Farklı programlama dillerini öğrenmekten, yeni teknolojiler keşfetmekten ve açık kaynak projelere katkı sağlamaktan büyük keyif alıyorum. Hayatım boyunca sürekli öğrenmeye ve paylaşmaya çalışıyorum.</p>
+                <div class="socials flex items-center mt-2">
+                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="https://github.com/erdncyz" target="_blank"><i class="fab fa-github text-2xl"></i></a>
+                    <a href="https://www.instagram.com/erdncyz/#" target="_blank"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="https://medium.com/@erdncyz" target="_blank"><i class="fab fa-medium text-2xl"></i></a>
+                    <a href="https://x.com/erdnc_ylmaz" target="_blank"><i class="fab fa-x-twitter text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="whatido" class="max-w-4xl mx-auto py-12 px-4">
+        <div class="section-title" data-tr="Neler Yapıyorum?" data-en="What I Do?">Neler Yapıyorum?</div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Test Otomasyonu" data-en="Test Automation">Test Otomasyonu</h3>
+                    <p class="text-[#e5e7eb]" data-tr="Web, mobil ve API test otomasyonu projeleri geliştiriyorum. Farklı framework ve araçlarla otomasyon süreçlerini yönetiyorum." data-en="I develop web, mobile, and API test automation projects. I manage automation processes with various frameworks and tools.">Web, mobil ve API test otomasyonu projeleri geliştiriyorum. Farklı framework ve araçlarla otomasyon süreçlerini yönetiyorum.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Fotoğrafçılık" data-en="Photography">Fotoğrafçılık</h3>
+                    <p class="text-[#e5e7eb]" data-tr="Doğa ve şehir fotoğrafları çekiyorum. Fotoğrafçılık benim için bir tutku ve yaratıcılığımı besleyen bir alan." data-en="I take nature and city photographs. Photography is a passion for me and a field that nurtures my creativity.">Doğa ve şehir fotoğrafları çekiyorum. Fotoğrafçılık benim için bir tutku ve yaratıcılığımı besleyen bir alan.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.instagram.com/erdncyz/#" target="_blank" class="text-[#7dd3fc] hover:text-pink-500"><i class="fab fa-instagram text-xl"></i></a>
+                </div>
+            </div>
+            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Açık Kaynak Katkı" data-en="Open Source Contribution">Açık Kaynak Katkı</h3>
+                    <p class="text-[#e5e7eb]" data-tr="Appium ve çeşitli açık kaynak projelere katkı sağlıyorum. Toplulukla birlikte gelişmekten keyif alıyorum." data-en="I contribute to Appium and various open source projects. I enjoy growing together with the community.">Appium ve çeşitli açık kaynak projelere katkı sağlıyorum. Toplulukla birlikte gelişmekten keyif alıyorum.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Blog Yazarlığı" data-en="Blog Writing">Blog Yazarlığı</h3>
+                    <p class="text-[#e5e7eb]" data-tr="Teknoloji, yazılım ve fotoğrafçılık üzerine blog yazıları yazıyorum. Bilgimi paylaşmayı seviyorum." data-en="I write blog posts about technology, software, and photography. I love sharing my knowledge.">Teknoloji, yazılım ve fotoğrafçılık üzerine blog yazıları yazıyorum. Bilgimi paylaşmayı seviyorum.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://medium.com/@erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-green-600"><i class="fab fa-medium text-xl"></i></a>
+                    <a href="https://x.com/erdnc_ylmaz" target="_blank" class="text-[#7dd3fc] hover:text-black"><i class="fab fa-x-twitter text-xl"></i></a>
+                </div>
+            </div>
+            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between md:col-span-2">
+                <div>
+                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Şirketlere Özel Siteler Kuruyorum" data-en="Custom Websites for Companies">Şirketlere Özel Siteler Kuruyorum</h3>
+                    <p class="text-[#e5e7eb]" data-tr="Şirketlerin ihtiyaçlarına özel, modern ve mobil uyumlu web siteleri geliştiriyorum. Tasarım, geliştirme ve yayına alma süreçlerinin tamamını yönetiyorum." data-en="I develop modern and mobile-friendly websites tailored to companies' needs. I manage the entire process from design to deployment.">Şirketlerin ihtiyaçlarına özel, modern ve mobil uyumlu web siteleri geliştiriyorum. Tasarım, geliştirme ve yayına alma süreçlerinin tamamını yönetiyorum.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="max-w-4xl mx-auto py-12 px-4">
+        <div class="section-title" data-tr="Skills & Tools" data-en="Skills & Tools">Skills & Tools</div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <div class="code-block">
+                    // Programming
+                    <br>Java, JavaScript, TypeScript, Python, Ruby, Scala, Node.js, React, HTML, CSS, SQL
+                </div>
+                <div class="code-block">
+                    // Automation & Testing
+                    <br>Selenium, Appium, Karate, Gatling, Cucumber, Rest Assured
+                </div>
+            </div>
+            <div>
+                <div class="code-block">
+                    // DevOps & Tools
+                    <br>Jenkins, Azure DevOps, Pipeline, Git, Docker, IntelliJ IDEA, VS Code
+                </div>
+                <div class="code-block">
+                    // Databases
+                    <br>MongoDB, MySQL, Oracle, DynamoDB
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-4xl mx-auto py-12 px-4">
+        <div class="section-title" data-tr="Projects & Contributions" data-en="Projects & Contributions">Projects & Contributions</div>
+        <div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">mercury-app-center</span>
+                <p class="text-[#e5e7eb] mb-2">Web tabanlı uygulama merkezi projesi.</p>
+                <a href="https://github.com/erdncyz/mercury-app-center" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">mercury-device-management</span>
+                <p class="text-[#e5e7eb] mb-2">Cihaz yönetimi için EJS tabanlı bir çözüm.</p>
+                <a href="https://github.com/erdncyz/mercury-device-management" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">mercury-monitoring</span>
+                <p class="text-[#e5e7eb] mb-2">JavaScript ile geliştirilmiş izleme ve monitoring uygulaması.</p>
+                <a href="https://github.com/erdncyz/mercury-monitoring" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">appium-browser-plugin</span>
+                <p class="text-[#e5e7eb] mb-2">Appium için tarayıcı üzerinde manuel kontrol sağlayan eklenti.</p>
+                <a href="https://github.com/erdncyz/appium-browser-plugin" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">appium-browser-driver</span>
+                <p class="text-[#e5e7eb] mb-2">Appium için özel tarayıcı sürücüsü.</p>
+                <a href="https://github.com/erdncyz/appium-browser-driver" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">orangehrm-web-ui-automation</span>
+                <p class="text-[#e5e7eb] mb-2">OrangeHRM için web arayüz otomasyon projesi.</p>
+                <a href="https://github.com/erdncyz/orangehrm-web-ui-automation" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">goart-pytest-appium</span>
+                <p class="text-[#e5e7eb] mb-2">Python ve Appium ile mobil test otomasyonu.</p>
+                <a href="https://github.com/erdncyz/goart-pytest-appium" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">goart-api-automation-playwright</span>
+                <p class="text-[#e5e7eb] mb-2">TypeScript ve Playwright ile API otomasyon projesi.</p>
+                <a href="https://github.com/erdncyz/goart-api-automation-playwright" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">login-register-local-db</span>
+                <p class="text-[#e5e7eb] mb-2">Yerel veritabanı ile giriş/kayıt uygulaması.</p>
+                <a href="https://github.com/erdncyz/login-register-local-db" target="_blank" class="text-[#38bdf8] hover:underline">GitHub</a>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">mercury-test-account <span class="private-badge">Private</span></span>
+                <p class="text-[#e5e7eb] mb-2">A tool for automating the creation of test accounts on the Mercury platform, enabling faster and more efficient development and QA workflows.</p>
+            </div>
+            <div class="project-card">
+                <span class="mono text-lg text-[#7dd3fc]">onur-cam <span class="private-badge">Private</span></span>
+                <p class="text-[#e5e7eb] mb-2">Özel bir proje (CSS tabanlı).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="max-w-4xl mx-auto py-12 px-4">
+        <div class="section-title" data-tr="Blog Yazılarım" data-en="My Blog Posts">Blog Yazılarım</div>
+        <div class="space-y-8">
+            <div class="bg-[#23272e] border border-[#334155] p-6">
+                <h3 class="font-bold text-xl text-[#7dd3fc] mb-2" data-tr="Test Otomasyonunda Neden Açık Kaynak?" data-en="Why Open Source in Test Automation?">Test Otomasyonunda Neden Açık Kaynak?</h3>
+                <p class="text-[#e5e7eb] mb-2" data-tr="Açık kaynak projeler, yazılım test otomasyonunda inovasyonun ve paylaşımın anahtarıdır. Topluluk desteğiyle gelişen araçlar, hem öğrenme hem de katkı sağlama açısından büyük fırsatlar sunar." data-en="Open source projects are the key to innovation and sharing in software test automation. Tools developed with community support offer great opportunities for both learning and contributing.">Açık kaynak projeler, yazılım test otomasyonunda inovasyonun ve paylaşımın anahtarıdır. Topluluk desteğiyle gelişen araçlar, hem öğrenme hem de katkı sağlama açısından büyük fırsatlar sunar.</p>
+                <a href="#" onclick="openModal('modal1'); return false;" class="text-[#38bdf8] hover:underline" data-tr="Devamını oku" data-en="Read more">Devamını oku</a>
+            </div>
+            <div class="bg-[#23272e] border border-[#334155] p-6">
+                <h3 class="font-bold text-xl text-[#7dd3fc] mb-2" data-tr="Fotoğrafçılıkla Yaratıcılığımı Nasıl Geliştiriyorum?" data-en="How Do I Improve My Creativity with Photography?">Fotoğrafçılıkla Yaratıcılığımı Nasıl Geliştiriyorum?</h3>
+                <p class="text-[#e5e7eb] mb-2" data-tr="Fotoğrafçılık, yazılım dünyasının dışında yaratıcılığımı besleyen en önemli hobim. Doğada ve şehirde çektiğim karelerle yeni bakış açıları kazanıyorum." data-en="Photography is my most important hobby that nurtures my creativity outside the software world. I gain new perspectives with the shots I take in nature and the city.">Fotoğrafçılık, yazılım dünyasının dışında yaratıcılığımı besleyen en önemli hobim. Doğada ve şehirde çektiğim karelerle yeni bakış açıları kazanıyorum.</p>
+                <a href="#" onclick="openModal('modal2'); return false;" class="text-[#38bdf8] hover:underline" data-tr="Devamını oku" data-en="Read more">Devamını oku</a>
+            </div>
+            <div class="text-center">
+                <a href="https://medium.com/@erdncyz" target="_blank" class="inline-block px-6 py-3 bg-gradient-to-r from-[#23272e] to-[#334155] text-[#7dd3fc] rounded-full font-semibold shadow hover:from-[#334155] hover:to-[#23272e] transition" data-tr="Tüm Yazılarım (Medium)" data-en="All My Posts (Medium)"><i class="fab fa-medium mr-2"></i>Tüm Yazılarım (Medium)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Modals -->
+    <div id="modal1" class="fixed inset-0 z-50 flex items-center justify-center bg-black hidden">
+        <div class="bg-[#23272e] rounded-lg shadow-xl max-w-2xl w-full p-8 relative animate-fade-in border border-[#334155]">
+            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-[#7dd3fc] hover:text-[#38bdf8] text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold mb-4 text-[#7dd3fc]">Test Otomasyonunda Neden Açık Kaynak?</h3>
+            <p class="text-[#e5e7eb] mb-2">Açık kaynak projeler, yazılım test otomasyonunda inovasyonun ve paylaşımın anahtarıdır. Topluluk desteğiyle gelişen araçlar, hem öğrenme hem de katkı sağlama açısından büyük fırsatlar sunar.</p>
+            <p class="text-[#e5e7eb] mb-2">Açık kaynak araçlar sayesinde, test otomasyonunda karşılaşılan sorunlara toplulukla birlikte çözüm bulmak mümkün olur. Ayrıca, bu araçlar üzerinde yapılan geliştirmeler herkesin kullanımına açık olduğu için, sektördeki en güncel ve etkili yöntemlere ulaşmak kolaylaşır.</p>
+            <p class="text-[#e5e7eb]">Kendi deneyimlerime göre, açık kaynak projelere katkı sağlamak hem teknik bilgi birikimini artırıyor hem de global bir topluluğun parçası olma fırsatı sunuyor.</p>
+        </div>
+    </div>
+    <div id="modal2" class="fixed inset-0 z-50 flex items-center justify-center bg-black hidden">
+        <div class="bg-[#23272e] rounded-lg shadow-xl max-w-2xl w-full p-8 relative animate-fade-in border border-[#334155]">
+            <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-[#7dd3fc] hover:text-[#38bdf8] text-2xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold mb-4 text-[#7dd3fc]">Fotoğrafçılıkla Yaratıcılığımı Nasıl Geliştiriyorum?</h3>
+            <p class="text-[#e5e7eb] mb-2">Fotoğrafçılık, yazılım dünyasının dışında yaratıcılığımı besleyen en önemli hobim. Doğada ve şehirde çektiğim karelerle yeni bakış açıları kazanıyorum.</p>
+            <p class="text-[#e5e7eb] mb-2">Her yeni fotoğraf, bana farklı bir hikaye anlatma ve anı yakalama fırsatı sunuyor. Fotoğrafçılık sayesinde detaylara daha fazla dikkat etmeyi ve sabırlı olmayı öğrendim.</p>
+            <p class="text-[#e5e7eb]">Bu hobi, iş hayatımda da yaratıcılığımı ve problem çözme becerilerimi geliştirmeme yardımcı oluyor.</p>
+        </div>
+    </div>
+    <script>
+      function openModal(id) {
+        document.getElementById(id).classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    </script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto py-12 px-4">
+        <div class="section-title" data-tr="Contact" data-en="Contact">Contact</div>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#23272e] border border-[#334155] p-8">
+                <h3 class="text-xl font-bold mb-4 text-[#7dd3fc]" data-tr="Get in Touch" data-en="Get in Touch">Get in Touch</h3>
+                <div class="mb-3 flex items-center"><i class="fas fa-envelope contact-icon"></i><a href="mailto:erdncyz@gmail.com" class="hover:underline text-[#e5e7eb]">erdncyz@gmail.com</a></div>
+            </div>
+            <div class="bg-[#23272e] border border-[#334155] p-8">
+                <h3 class="text-xl font-bold mb-4 text-[#7dd3fc]" data-tr="Connect" data-en="Connect">Connect</h3>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank" class="text-[#e5e7eb] hover:text-[#38bdf8]"><i class="fab fa-linkedin text-2xl"></i></a>
+                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#e5e7eb] hover:text-[#38bdf8]"><i class="fab fa-github text-2xl"></i></a>
+                    <a href="https://www.instagram.com/erdncyz/#" target="_blank" class="text-[#e5e7eb] hover:text-pink-500"><i class="fab fa-instagram text-2xl"></i></a>
+                    <a href="https://medium.com/@erdncyz" target="_blank" class="text-[#e5e7eb] hover:text-green-600"><i class="fab fa-medium text-2xl"></i></a>
+                    <a href="https://x.com/erdnc_ylmaz" target="_blank" class="text-[#e5e7eb] hover:text-black"><i class="fab fa-x-twitter text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 text-[#334155] text-sm">
+        &copy; 2024 Erdinç YILMAZ. All rights reserved.
+    </footer>
+
+    <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-tr]').forEach(function(el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      // Highlight selected button
+      document.getElementById('lang-tr').classList.toggle('bg-[#23272e]', lang === 'tr');
+      document.getElementById('lang-en').classList.toggle('bg-[#23272e]', lang === 'en');
+    }
+    document.getElementById('lang-tr').onclick = function() { setLang('tr'); };
+    document.getElementById('lang-en').onclick = function() { setLang('en'); };
+    setLang('en');
+    </script>
+</body>
+</html>
