@@ -14,13 +14,26 @@
             color: #e5e7eb;
         }
         .section-title {
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            color: #7dd3fc;
-            border-left: 4px solid #38bdf8;
-            padding-left: 0.75rem;
+            background: linear-gradient(to right, #7dd3fc, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             margin-bottom: 2rem;
             letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #7dd3fc, #38bdf8);
+            border-radius: 2px;
         }
         .terminal {
             background: #23272e;
@@ -30,7 +43,8 @@
             border-radius: 0.5rem;
             margin-bottom: 2rem;
             font-family: 'Fira Code', monospace;
-            box-shadow: 0 2px 16px 0 #00000033;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid #334155;
         }
         .code-block {
             background: #23272e;
@@ -40,24 +54,29 @@
             border-radius: 0.4rem;
             font-family: 'Fira Code', monospace;
             margin-bottom: 1.5rem;
+            border: 1px solid #334155;
         }
         .project-card {
             background: #23272e;
             border: 1px solid #334155;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            transition: box-shadow 0.2s;
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
         }
         .project-card:hover {
-            box-shadow: 0 4px 24px 0 #38bdf855;
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
         .socials a {
             color: #7dd3fc;
             margin-right: 1.2rem;
-            transition: color 0.2s;
+            transition: all 0.3s ease;
         }
         .socials a:hover {
             color: #38bdf8;
+            transform: translateY(-2px);
         }
         .mono {
             font-family: 'Fira Code', monospace;
@@ -73,6 +92,48 @@
             padding: 0.1rem 0.5rem;
             border-radius: 0.3rem;
             margin-left: 0.5rem;
+        }
+        .card {
+            background: #23272e;
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            color: #7dd3fc;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .card p {
+            color: #e5e7eb;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .card-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        .card-icons i {
+            color: #7dd3fc;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .card-icons i:hover {
+            color: #38bdf8;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -118,55 +179,74 @@
     </section>
 
     <!-- What I Do Section -->
-    <section id="whatido" class="max-w-4xl mx-auto py-12 px-4">
-        <div class="section-title" data-tr="Neler Yapıyorum?" data-en="What I Do?">Neler Yapıyorum?</div>
+    <section id="whatido" class="max-w-4xl mx-auto py-16 px-4">
+        <h2 class="section-title mb-12" data-tr="Neler Yapıyorum?" data-en="What I Do?">What I Do?</h2>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+            <div class="card">
                 <div>
-                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Test Otomasyonu" data-en="Test Automation">Test Otomasyonu</h3>
-                    <p class="text-[#e5e7eb]" data-tr="Web, mobil ve API test otomasyonu projeleri geliştiriyorum. Farklı framework ve araçlarla otomasyon süreçlerini yönetiyorum." data-en="I develop web, mobile, and API test automation projects. I manage automation processes with various frameworks and tools.">Web, mobil ve API test otomasyonu projeleri geliştiriyorum. Farklı framework ve araçlarla otomasyon süreçlerini yönetiyorum.</p>
+                    <h3 data-tr="Test Otomasyonu" data-en="Test Automation">Test Automation</h3>
+                    <p data-tr="Web, mobil ve API test otomasyonu projeleri geliştiriyorum. Farklı framework ve araçlarla otomasyon süreçlerini yönetiyorum." data-en="I develop web, mobile, and API test automation projects. I manage automation processes with various frameworks and tools.">I develop web, mobile, and API test automation projects. I manage automation processes with various frameworks and tools.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-github text-xl"></i></a>
+                <div class="card-icons">
+                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/erdncyz" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+            <div class="card">
                 <div>
-                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Fotoğrafçılık" data-en="Photography">Fotoğrafçılık</h3>
-                    <p class="text-[#e5e7eb]" data-tr="Doğa ve şehir fotoğrafları çekiyorum. Fotoğrafçılık benim için bir tutku ve yaratıcılığımı besleyen bir alan." data-en="I take nature and city photographs. Photography is a passion for me and a field that nurtures my creativity.">Doğa ve şehir fotoğrafları çekiyorum. Fotoğrafçılık benim için bir tutku ve yaratıcılığımı besleyen bir alan.</p>
+                    <h3 data-tr="Fotoğrafçılık" data-en="Photography">Photography</h3>
+                    <p data-tr="Doğa ve şehir fotoğrafları çekiyorum. Fotoğrafçılık benim için bir tutku ve yaratıcılığımı besleyen bir alan." data-en="I take nature and city photographs. Photography is a passion for me and a field that nurtures my creativity.">I take nature and city photographs. Photography is a passion for me and a field that nurtures my creativity.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://www.instagram.com/erdncyz/#" target="_blank" class="text-[#7dd3fc] hover:text-pink-500"><i class="fab fa-instagram text-xl"></i></a>
+                <div class="card-icons">
+                    <a href="https://www.instagram.com/erdncyz/#" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+            <div class="card">
                 <div>
-                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Açık Kaynak Katkı" data-en="Open Source Contribution">Açık Kaynak Katkı</h3>
-                    <p class="text-[#e5e7eb]" data-tr="Appium ve çeşitli açık kaynak projelere katkı sağlıyorum. Toplulukla birlikte gelişmekten keyif alıyorum." data-en="I contribute to Appium and various open source projects. I enjoy growing together with the community.">Appium ve çeşitli açık kaynak projelere katkı sağlıyorum. Toplulukla birlikte gelişmekten keyif alıyorum.</p>
+                    <h3 data-tr="Kürek Sporu" data-en="Rowing">Rowing</h3>
+                    <p data-tr="Kürek sporu ile hem fiziksel hem de zihinsel dayanıklılığımı geliştiriyorum. Su üzerinde geçirdiğim zaman benim için hem spor hem de meditasyon." data-en="I develop both my physical and mental endurance through rowing. The time I spend on water is both sport and meditation for me.">I develop both my physical and mental endurance through rowing. The time I spend on water is both sport and meditation for me.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-github text-xl"></i></a>
+                <div class="card-icons">
+                    <i class="fas fa-water"></i>
                 </div>
             </div>
-            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between">
+            <div class="card">
                 <div>
-                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Blog Yazarlığı" data-en="Blog Writing">Blog Yazarlığı</h3>
-                    <p class="text-[#e5e7eb]" data-tr="Teknoloji, yazılım ve fotoğrafçılık üzerine blog yazıları yazıyorum. Bilgimi paylaşmayı seviyorum." data-en="I write blog posts about technology, software, and photography. I love sharing my knowledge.">Teknoloji, yazılım ve fotoğrafçılık üzerine blog yazıları yazıyorum. Bilgimi paylaşmayı seviyorum.</p>
+                    <h3 data-tr="Açık Kaynak Katkı" data-en="Open Source Contribution">Open Source Contribution</h3>
+                    <p data-tr="Appium ve çeşitli açık kaynak projelere katkı sağlıyorum. Toplulukla birlikte gelişmekten keyif alıyorum." data-en="I contribute to Appium and various open source projects. I enjoy growing together with the community.">I contribute to Appium and various open source projects. I enjoy growing together with the community.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://medium.com/@erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-green-600"><i class="fab fa-medium text-xl"></i></a>
-                    <a href="https://x.com/erdnc_ylmaz" target="_blank" class="text-[#7dd3fc] hover:text-black"><i class="fab fa-x-twitter text-xl"></i></a>
+                <div class="card-icons">
+                    <a href="https://github.com/erdncyz" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="bg-[#23272e] border border-[#334155] p-6 flex flex-col justify-between md:col-span-2">
+            <div class="card">
                 <div>
-                    <h3 class="font-bold text-lg text-[#7dd3fc] mb-2" data-tr="Şirketlere Özel Siteler Kuruyorum" data-en="Custom Websites for Companies">Şirketlere Özel Siteler Kuruyorum</h3>
-                    <p class="text-[#e5e7eb]" data-tr="Şirketlerin ihtiyaçlarına özel, modern ve mobil uyumlu web siteleri geliştiriyorum. Tasarım, geliştirme ve yayına alma süreçlerinin tamamını yönetiyorum." data-en="I develop modern and mobile-friendly websites tailored to companies' needs. I manage the entire process from design to deployment.">Şirketlerin ihtiyaçlarına özel, modern ve mobil uyumlu web siteleri geliştiriyorum. Tasarım, geliştirme ve yayına alma süreçlerinin tamamını yönetiyorum.</p>
+                    <h3 data-tr="Blog Yazarlığı" data-en="Blog Writing">Blog Writing</h3>
+                    <p data-tr="Teknoloji, yazılım ve fotoğrafçılık üzerine blog yazıları yazıyorum. Bilgimi paylaşmayı seviyorum." data-en="I write blog posts about technology, software, and photography. I love sharing my knowledge.">I write blog posts about technology, software, and photography. I love sharing my knowledge.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="https://github.com/erdncyz" target="_blank" class="text-[#7dd3fc] hover:text-[#38bdf8]"><i class="fab fa-github text-xl"></i></a>
+                <div class="card-icons">
+                    <a href="https://medium.com/@erdncyz" target="_blank"><i class="fab fa-medium"></i></a>
+                    <a href="https://x.com/erdnc_ylmaz" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <h3 data-tr="Okuma" data-en="Reading">Reading</h3>
+                    <p data-tr="İlgilendiğim kitap türleri: Yazılım, algoritmalar, bilim kurgu, kişisel gelişim ve teknoloji. Düzenli olarak Bilim ve Teknik ile yazılım ve teknoloji dergilerini takip ediyorum." data-en="Book genres I'm interested in: Software, algorithms, science fiction, personal development, and technology. I regularly follow Science & Technology and software & technology magazines.">Book genres I'm interested in: Software, algorithms, science fiction, personal development, and technology. I regularly follow Science & Technology and software & technology magazines.</p>
+                </div>
+                <div class="card-icons">
+                    <i class="fas fa-book text-[#7dd3fc]"></i>
+                    <i class="fas fa-newspaper text-[#7dd3fc]"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <h3 data-tr="Şirketlere Özel Siteler Kuruyorum" data-en="Custom Websites for Companies">Custom Websites for Companies</h3>
+                    <p data-tr="Şirketlerin ihtiyaçlarına özel, modern ve mobil uyumlu web siteleri geliştiriyorum. Tasarım, geliştirme ve yayına alma süreçlerinin tamamını yönetiyorum." data-en="I develop modern and mobile-friendly websites tailored to companies' needs. I manage the entire process from design to deployment.">I develop modern and mobile-friendly websites tailored to companies' needs. I manage the entire process from design to deployment.</p>
+                </div>
+                <div class="card-icons">
+                    <a href="https://www.linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/erdncyz" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
