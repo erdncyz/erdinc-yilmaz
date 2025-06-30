@@ -337,18 +337,24 @@
                 hyphens: auto;
             }
         }
+
+        .lang-selected {
+            background: #7dd3fc !important;
+            color: #181a20 !important;
+            border-color: #7dd3fc !important;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="w-full py-4 px-8 flex justify-between items-center sticky top-0 z-50">
-        <span class="text-2xl font-bold tracking-tight animate-gradient">🅔🅡🅓🅘🅝🅒 🅨🅘🅛🅜🅐🅩</span>
+        <span class="text-2xl font-bold tracking-tight animate-gradient" style="color: #fff;">🅔🅡🅓🅘🅝🅒 🅨🅘🅛🅜🅐🅩</span>
         <div class="flex items-center space-x-8">
             <div class="hidden md:flex space-x-8 text-[#a3e635] font-mono">
-                <a href="#about" class="hover:text-[#38bdf8] transition-all" data-tr="about" data-en="about">about</a>
-                <a href="#skills" class="hover:text-[#38bdf8] transition-all" data-tr="skills" data-en="skills">skills</a>
-                <a href="#projects" class="hover:text-[#38bdf8] transition-all" data-tr="projects" data-en="projects">projects</a>
-                <a href="#contact" class="hover:text-[#38bdf8] transition-all" data-tr="contact" data-en="contact">contact</a>
+                <a href="#about" class="hover:text-[#38bdf8] transition-all" data-tr="Hakkımda" data-en="About">About</a>
+                <a href="#skills" class="hover:text-[#38bdf8] transition-all" data-tr="Yetenekler" data-en="Skills">Skills</a>
+                <a href="#projects" class="hover:text-[#38bdf8] transition-all" data-tr="Projeler" data-en="Projects">Projects</a>
+                <a href="#contact" class="hover:text-[#38bdf8] transition-all" data-tr="İletişim" data-en="Contact">Contact</a>
             </div>
             <div class="ml-6 flex items-center space-x-2">
                 <button id="lang-tr" class="text-[#7dd3fc] font-bold px-3 py-1.5 border border-[#38bdf8] rounded-md bg-[#23272e] transition-all">TR</button>
@@ -697,9 +703,9 @@
       document.querySelectorAll('[data-tr]').forEach(function(el) {
         el.textContent = el.getAttribute('data-' + lang);
       });
-      // Highlight selected button
-      document.getElementById('lang-tr').classList.toggle('bg-[#23272e]', lang === 'tr');
-      document.getElementById('lang-en').classList.toggle('bg-[#23272e]', lang === 'en');
+      // Buton vurgusu
+      document.getElementById('lang-tr').classList.toggle('lang-selected', lang === 'tr');
+      document.getElementById('lang-en').classList.toggle('lang-selected', lang === 'en');
     }
     document.getElementById('lang-tr').onclick = function() { setLang('tr'); };
     document.getElementById('lang-en').onclick = function() { setLang('en'); };
