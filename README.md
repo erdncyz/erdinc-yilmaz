@@ -19,11 +19,11 @@ This is a modern, developer-focused personal portfolio and blog website for Erdi
 
 ## How to Run/View
 1. Clone or download this repository.
-2. Open `erdnc.html` in your web browser.
+2. Open `index.html` in your web browser.
 3. No build step or server required; works as a static site.
 
 ## Customization
-- Update `erdnc.html` to change content, add blog posts, or modify sections.
+- Update `index.html` to change content, add blog posts, or modify sections.
 - Add/remove social media links as needed.
 - To add more languages, extend the `data-tr`/`data-en` attributes and JS logic.
 
