@@ -52,6 +52,224 @@
             background: var(--primary-dark);
         }
 
+        /* Cookie Consent Banner Styles */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(35, 39, 46, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            padding: 1.5rem;
+            z-index: 1000;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-banner .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-banner .cookie-text {
+            flex: 1;
+            min-width: 300px;
+            color: var(--text);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .cookie-banner .cookie-text strong {
+            color: var(--primary);
+        }
+
+        .cookie-banner .cookie-buttons {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .cookie-btn.accept {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--bg-dark);
+            border-color: var(--primary);
+        }
+
+        .cookie-btn.accept:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(125, 211, 252, 0.3);
+        }
+
+        .cookie-btn.decline {
+            background: transparent;
+            color: var(--text);
+            border-color: var(--border-color);
+        }
+
+        .cookie-btn.decline:hover {
+            background: var(--border-color);
+            color: var(--primary);
+        }
+
+        .cookie-btn.settings {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .cookie-btn.settings:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+        }
+
+        /* Location Status Indicator */
+        .location-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            color: var(--text);
+            z-index: 999;
+            display: none;
+            font-family: 'Fira Code', monospace;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .location-status.show {
+            display: block;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        .location-status .status-icon {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Cookie Settings Modal */
+        .cookie-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 1001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .cookie-modal.show {
+            display: flex;
+        }
+
+        .cookie-modal-content {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .cookie-modal h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cookie-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cookie-option:last-child {
+            border-bottom: none;
+        }
+
+        .cookie-option label {
+            flex: 1;
+            color: var(--text);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .cookie-option input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            accent-color: var(--primary);
+        }
+
+        .cookie-option .description {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .cookie-banner .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .cookie-banner .cookie-text {
+                min-width: auto;
+                text-align: center;
+            }
+            
+            .cookie-banner .cookie-buttons {
+                justify-content: center;
+            }
+        }
+
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -706,7 +924,354 @@
         &copy; 2024 Erdinç YILMAZ. All rights reserved.
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="container">
+            <div class="cookie-text">
+                <strong><i class="fas fa-cookie-bite"></i> Çerezler</strong><br>
+                <span data-tr="Bu site deneyiminizi geliştirmek ve analitik için çerezler kullanır." 
+                      data-en="This site uses cookies to improve your experience and for analytics.">
+                    Bu site deneyiminizi geliştirmek ve analitik için çerezler kullanır.
+                </span>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn accept" onclick="acceptCookies()">
+                    <i class="fas fa-check"></i> <span data-tr="Kabul Et" data-en="Accept">Kabul Et</span>
+                </button>
+                <button class="cookie-btn decline" onclick="declineCookies()">
+                    <i class="fas fa-times"></i> <span data-tr="Reddet" data-en="Decline">Reddet</span>
+                </button>
+                <button class="cookie-btn settings" onclick="showCookieSettings()">
+                    <i class="fas fa-cog"></i> <span data-tr="Ayarlar" data-en="Settings">Ayarlar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieModal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <h3><i class="fas fa-cookie-bite"></i> <span data-tr="Çerez Ayarları" data-en="Cookie Settings">Çerez Ayarları</span></h3>
+            
+            <div class="cookie-option">
+                <label for="essential">
+                    <strong data-tr="Gerekli Çerezler" data-en="Essential Cookies">Gerekli Çerezler</strong>
+                    <div class="description" data-tr="Sitenin çalışması için gerekli çerezler. Devre dışı bırakılamaz." 
+                         data-en="Cookies required for the site to function. Cannot be disabled.">
+                        Sitenin çalışması için gerekli çerezler. Devre dışı bırakılamaz.
+                    </div>
+                </label>
+                <input type="checkbox" id="essential" checked disabled>
+            </div>
+
+            <div class="cookie-option">
+                <label for="analytics">
+                    <strong data-tr="Analitik Çerezler" data-en="Analytics Cookies">Analitik Çerezler</strong>
+                    <div class="description" data-tr="Site kullanımını analiz etmek için Google Analytics çerezleri." 
+                         data-en="Google Analytics cookies to analyze site usage.">
+                        Site kullanımını analiz etmek için Google Analytics çerezleri.
+                    </div>
+                </label>
+                <input type="checkbox" id="analytics" checked>
+            </div>
+
+            <div class="cookie-option">
+                <label for="performance">
+                    <strong data-tr="Performans Çerezleri" data-en="Performance Cookies">Performans Çerezleri</strong>
+                    <div class="description" data-tr="Site performansını optimize etmek için kullanılır." 
+                         data-en="Used to optimize site performance.">
+                        Site performansını optimize etmek için kullanılır.
+                    </div>
+                </label>
+                <input type="checkbox" id="performance" checked>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; justify-content: flex-end;">
+                <button class="cookie-btn decline" onclick="closeCookieSettings()">
+                    <span data-tr="İptal" data-en="Cancel">İptal</span>
+                </button>
+                <button class="cookie-btn accept" onclick="saveCookieSettings()">
+                    <span data-tr="Kaydet" data-en="Save">Kaydet</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
+    // Cookie and Location Management
+    let userLocation = null;
+    let cookieConsent = {
+      essential: true,
+      analytics: false,
+      performance: false
+    };
+
+    // Check if user has already given consent
+    function checkExistingConsent() {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent) {
+        cookieConsent = JSON.parse(consent);
+        if (cookieConsent.analytics) {
+          enableAnalytics();
+        }
+        if (cookieConsent.performance) {
+          requestLocation();
+        }
+      } else {
+        // Show cookie banner after 1 second
+        setTimeout(() => {
+          document.getElementById('cookieBanner').classList.add('show');
+        }, 1000);
+      }
+    }
+
+    // Accept all cookies
+    function acceptCookies() {
+      cookieConsent = {
+        essential: true,
+        analytics: true,
+        performance: true
+      };
+      localStorage.setItem('cookieConsent', JSON.stringify(cookieConsent));
+      document.getElementById('cookieBanner').classList.remove('show');
+      
+      enableAnalytics();
+      requestLocation();
+      
+      showNotification('Çerez ayarları kaydedildi! 🍪', 'success');
+    }
+
+    // Decline all non-essential cookies
+    function declineCookies() {
+      cookieConsent = {
+        essential: true,
+        analytics: false,
+        performance: false
+      };
+      localStorage.setItem('cookieConsent', JSON.stringify(cookieConsent));
+      document.getElementById('cookieBanner').classList.remove('show');
+      
+      showNotification('Çerez tercihleri kaydedildi.', 'info');
+    }
+
+    // Show cookie settings modal
+    function showCookieSettings() {
+      document.getElementById('cookieModal').classList.add('show');
+      
+      // Set current preferences
+      document.getElementById('analytics').checked = cookieConsent.analytics;
+      document.getElementById('performance').checked = cookieConsent.performance;
+    }
+
+    // Close cookie settings modal
+    function closeCookieSettings() {
+      document.getElementById('cookieModal').classList.remove('show');
+    }
+
+    // Save cookie settings
+    function saveCookieSettings() {
+      cookieConsent.analytics = document.getElementById('analytics').checked;
+      cookieConsent.performance = document.getElementById('performance').checked;
+      
+      localStorage.setItem('cookieConsent', JSON.stringify(cookieConsent));
+      document.getElementById('cookieBanner').classList.remove('show');
+      document.getElementById('cookieModal').classList.remove('show');
+      
+      if (cookieConsent.analytics) {
+        enableAnalytics();
+      }
+      
+      if (cookieConsent.performance) {
+        requestLocation();
+      }
+      
+      showNotification('Ayarlar kaydedildi! ⚙️', 'success');
+    }
+
+    // Enable Google Analytics
+    function enableAnalytics() {
+      if (typeof gtag !== 'undefined') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
+    }
+
+    // Request user location (silent)
+    function requestLocation() {
+      if (!navigator.geolocation) {
+        console.log('Geolocation not supported');
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          userLocation = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            accuracy: position.coords.accuracy,
+            timestamp: new Date().toISOString()
+          };
+          
+          // Send location to your analytics or backend
+          sendLocationData(userLocation);
+          
+          // Get city name from coordinates (silent)
+          getCityFromCoordinates(userLocation.latitude, userLocation.longitude);
+        },
+        function(error) {
+          // Silent error handling - just log to console
+          console.log('Location access denied or failed:', error.message);
+        },
+        {
+          enableHighAccuracy: false, // Less intrusive
+          timeout: 5000,
+          maximumAge: 600000 // 10 minutes
+        }
+      );
+    }
+
+    // Get city name from coordinates using a free API (silent)
+    function getCityFromCoordinates(lat, lon) {
+      fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=tr`)
+        .then(response => response.json())
+        .then(data => {
+          const city = data.city || data.locality || data.principalSubdivision || 'Unknown';
+          const country = data.countryName || '';
+          
+          userLocation.city = city;
+          userLocation.country = country;
+          
+          // Silent - just log to console
+          console.log(`Location detected: ${city}, ${country}`);
+          
+          // Send updated location data
+          sendLocationData(userLocation);
+        })
+        .catch(error => {
+          console.log('City lookup failed:', error.message);
+          // Still send location data without city info
+          sendLocationData(userLocation);
+        });
+    }
+
+    // Send location data to your backend or analytics
+    function sendLocationData(location) {
+      // Send to Google Analytics if enabled
+      if (cookieConsent.analytics && typeof gtag !== 'undefined') {
+        // Send location event
+        gtag('event', 'location_shared', {
+          'event_category': 'User Location',
+          'event_label': `${location.city || 'unknown'}, ${location.country || 'unknown'}`,
+          'custom_map': {
+            'custom_parameter_1': location.latitude,
+            'custom_parameter_2': location.longitude,
+            'custom_parameter_3': location.city || 'unknown',
+            'custom_parameter_4': location.country || 'unknown'
+          }
+        });
+        
+        // Send as custom dimensions (you need to set these up in GA4)
+        gtag('config', 'G-EPXJ05TPDM', {
+          'custom_map': {
+            'custom_parameter_1': 'user_latitude',
+            'custom_parameter_2': 'user_longitude', 
+            'custom_parameter_3': 'user_city',
+            'custom_parameter_4': 'user_country'
+          }
+        });
+        
+        // Send page view with location context
+        gtag('event', 'page_view', {
+          'page_title': document.title,
+          'page_location': window.location.href,
+          'user_city': location.city || 'unknown',
+          'user_country': location.country || 'unknown',
+          'user_coordinates': `${location.latitude.toFixed(4)}, ${location.longitude.toFixed(4)}`
+        });
+      }
+      
+      // You can also send to your own backend
+      // fetch('/api/location', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(location)
+      // });
+      
+      console.log('Konum bilgisi:', location);
+    }
+
+    // Show location status
+    function showLocationStatus(message, type) {
+      const statusElement = document.getElementById('locationStatus');
+      const textElement = document.getElementById('locationText');
+      
+      textElement.textContent = message;
+      statusElement.classList.add('show');
+      
+      // Update icon based on type
+      const icon = statusElement.querySelector('.status-icon');
+      icon.className = 'status-icon fas ';
+      
+      switch(type) {
+        case 'loading':
+          icon.className += 'fa-spinner fa-spin';
+          break;
+        case 'success':
+          icon.className += 'fa-map-marker-alt';
+          break;
+        case 'error':
+          icon.className += 'fa-exclamation-triangle';
+          break;
+        default:
+          icon.className += 'fa-map-marker-alt';
+      }
+    }
+
+    // Hide location status
+    function hideLocationStatus() {
+      document.getElementById('locationStatus').classList.remove('show');
+    }
+
+    // Show notification
+    function showNotification(message, type) {
+      // Create notification element
+      const notification = document.createElement('div');
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--bg-card);
+        color: var(--text);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--border-color);
+        z-index: 1002;
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        animation: slideDown 0.3s ease-out;
+      `;
+      
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      
+      // Remove after 3 seconds
+      setTimeout(() => {
+        notification.style.animation = 'slideUp 0.3s ease-in';
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 300);
+      }, 3000);
+    }
+
+    // Language functions
     function setLang(lang) {
       document.querySelectorAll('[data-tr]').forEach(function(el) {
         el.textContent = el.getAttribute('data-' + lang);
@@ -739,6 +1304,45 @@
     document.getElementById('read-less-btn').onclick = function() {
       document.getElementById('about-details').classList.add('hidden');
       document.getElementById('about-summary').classList.remove('hidden');
+    };
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      checkExistingConsent();
+      
+      // Add CSS animations
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideDown {
+          from {
+            transform: translateX(-50%) translateY(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        @keyframes slideUp {
+          from {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(-50%) translateY(-100%);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('cookieModal').onclick = function(e) {
+      if (e.target === this) {
+        closeCookieSettings();
+      }
     };
     </script>
 </body>
