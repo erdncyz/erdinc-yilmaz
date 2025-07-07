@@ -694,12 +694,14 @@
         @media (max-width: 768px) {
             .logo-container {
                 flex: 1;
-                max-width: calc(100vw - 150px);
+                max-width: calc(100vw - 140px);
+                overflow: hidden;
             }
             
             .logo-container span {
                 line-height: 1.1;
                 word-spacing: normal;
+                white-space: nowrap;
             }
             
             nav {
@@ -710,12 +712,23 @@
 
         @media (max-width: 480px) {
             .logo-container {
-                max-width: calc(100vw - 120px);
+                max-width: calc(100vw - 110px);
             }
             
             .logo-container span {
-                font-size: 1.125rem;
+                font-size: 1rem !important;
                 letter-spacing: -0.5px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .logo-container {
+                max-width: calc(100vw - 100px);
+            }
+            
+            .logo-container span {
+                font-size: 0.9rem !important;
+                letter-spacing: -1px;
             }
         }
 
@@ -872,17 +885,14 @@
     <!-- Navigation -->
     <nav class="w-full py-4 px-4 md:px-8 flex justify-between items-center sticky top-0 z-50">
         <div class="logo-container relative">
-            <span class="text-xl md:text-3xl font-black tracking-tight leading-tight" style="
+            <span class="text-lg md:text-3xl font-black tracking-tight leading-tight whitespace-nowrap" style="
                 background: linear-gradient(45deg, var(--primary), var(--secondary));
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
                 text-shadow: 0 0 30px rgba(0, 245, 255, 0.8);
                 filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
-                display: block;
-            ">
-                <span class="block md:inline">⚡ ERDINC YILMAZ</span>
-            </span>
+            ">⚡ ERDINC YILMAZ</span>
             <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-lg opacity-20 blur animate-pulse"></div>
         </div>
         <div class="flex items-center space-x-2 md:space-x-8">
