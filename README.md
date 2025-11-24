@@ -1,54 +1,87 @@
-# Erdinç Yılmaz - Personal Portfolio
+<div align="center">
+  <h1 align="center">Hi there, I'm Erdinç Yılmaz! 👋</h1>
+  <h3 align="center">Software Test Automation Engineer | iOS & Mobile Application Developer</h3>
+  
+  <p align="center"> 
+    <img src="https://komarev.com/ghpvc/?username=erdncyz&style=flat-square&color=blue" alt="erdncyz" /> 
+  </p>
 
-### Hi there 👋 I'm Erdinç Yılmaz
+  <p align="center">
+    <a href="https://linkedin.com/in/erdinç-yılmaz-b07582152/" target="_blank">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    </a>
+    <a href="https://medium.com/@erdncyz" target="_blank">
+      <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/>
+    </a>
+    <a href="mailto:erdncyz@gmail.com">
+      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+    </a>
+  </p>
+</div>
 
-🎓 **Software Test Automation Engineer | iOS & Mobile Application Developer | Technology Enthusiast**
+---
 
-👨‍💻 **Proficient in:**
-*   **Mobile Development:** iOS (Swift, SwiftUI, UIKit), Android (Kotlin), Flutter
-*   **Test Automation:** Web, Mobile & API Automation (Appium, Selenium, Playwright, XCUITest)
-*   **DevOps:** CI/CD Pipelines (Jenkins, Azure DevOps), Docker
+### 🚀 About Me
 
-🔧 **Tools & Technologies:**
-Swift, Kotlin, Java, Python, JavaScript/TypeScript, SQL, NoSQL, Git, Postman, JMeter, RestAssured
+I am a passionate **Software Test Automation Engineer** and **iOS Developer** based in Turkey. I specialize in building robust test automation frameworks and developing native mobile applications. I am also an active **Open Source Contributor**, particularly for the Appium ecosystem.
+
+- � I’m currently working on **iOS Development & Test Automation**
+- 🌱 I’m currently learning **Advanced Swift & SwiftUI Patterns**
+- 👯 I’m looking to collaborate on **Open Source Mobile Test Tools**
+- 💬 Ask me about **Appium, Selenium, iOS, and Test Automation**
 
 ---
 
-## About This Website
-This repository contains the source code for my personal portfolio website. It features a modern, developer-centric design with a terminal-inspired aesthetic.
+### 🛠️ Languages & Tools
 
-## Features
-- **Modern UI:** Dark mode, glassmorphism effects, and terminal-style typography.
-- **Responsive:** Fully optimized for desktop and mobile devices.
-- **Multi-language:** Built-in support for Turkish (TR) and English (EN).
-- **Sections:**
-  - **About:** Professional bio and introduction.
-  - **Skills:** Comprehensive list of technical skills (Mobile, Automation, Backend).
-  - **Projects:** Showcase of open-source and personal projects.
-  - **Blog:** Technical articles and insights.
-  - **Contact:** Social media links and email integration.
+<div align="center">
 
-## Tech Stack
-- **Core:** HTML5, CSS3
-- **Styling:** Tailwind CSS (CDN)
-- **Icons:** Font Awesome
-- **Fonts:** Google Fonts (Inter, JetBrains Mono)
-- **Logic:** Vanilla JavaScript (No heavy frameworks)
+**Mobile Development**
+<br>
+<img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" />
+<img src="https://img.shields.io/badge/SwiftUI-000000?style=for-the-badge&logo=swift&logoColor=blue" />
+<img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white" />
+<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+<img src="https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white" />
 
-## How to Run
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/erdncyz/erdinc-yilmaz.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd erdinc-yilmaz
-   ```
-3. Open `index.html` in your preferred web browser.
+**Test Automation**
+<br>
+<img src="https://img.shields.io/badge/Appium-4195B3?style=for-the-badge&logo=appium&logoColor=white" />
+<img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
+<img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" />
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
 
-## Customization
-- Edit `index.html` to update content, add new projects, or modify the bio.
-- Images are located in the root directory (e.g., `profile.jpg`).
+**Languages & Backend**
+<br>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+
+</div>
 
 ---
-© 2024 Erdinç Yılmaz. All rights reserved.
+
+### 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=erdncyz&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="erdncyz's github stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=erdncyz&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Top Languages" />
+</div>
+
+---
+
+### 🌟 Open Source Contributions
+
+I actively contribute to the community. Here are some projects I've been involved with:
+
+- **[Appium Device Farm](https://github.com/appium/appium-device-farm):** Contributing to the management of device farms for Appium.
+- **[Appium Browser Plugin](https://github.com/erdncyz/appium-browser-plugin):** A plugin to control browsers manually during Appium sessions.
+
+---
+
+<div align="center">
+  <p>© 2024 Erdinç Yılmaz</p>
+</div>
